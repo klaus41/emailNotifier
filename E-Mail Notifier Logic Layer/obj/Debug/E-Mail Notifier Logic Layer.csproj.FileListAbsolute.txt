@@ -1,0 +1,15 @@
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\E-Mail Notifier Logic Layer.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\E-Mail Notifier Logic Layer.pdb
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Common.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Dns.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Groupware.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Mail.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Nntp.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.OpenPGP.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Pop3.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Smtp.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.WhoIs.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.csprojResolveAssemblyReference.cache
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.dll
+C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.pdb

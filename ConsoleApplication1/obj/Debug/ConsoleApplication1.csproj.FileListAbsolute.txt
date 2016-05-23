@@ -1,1 +1,0 @@
-C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
