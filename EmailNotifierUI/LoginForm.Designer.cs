@@ -33,6 +33,7 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // usernameTxtBox
@@ -107,5 +108,6 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button loginButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

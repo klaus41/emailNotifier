@@ -8,10 +8,10 @@ namespace BLL
 {
     public class emailInfo
     {
-        public static string getHeader()
+        public static string getSubject()
         {
-            string header = "This is a header";
-            return header;
+            string subject = "This is a header";
+            return subject;
         }
 
         public static string getBody()
@@ -20,6 +20,12 @@ namespace BLL
                           "This is the Body! This is the Body! This is the Body!" +
                           "This is the Body! This is the Body! This is the Body! This is the Body! This is the Body!";
             return body;
+        }
+
+        public static string getSender()
+        {
+            string sender = "ivangay@fagnet.ana";
+            return sender;
         }
     }
 }

@@ -17,18 +17,15 @@ namespace EmailNotifierUI
         public MainForm()
         {
             InitializeComponent();
+            senderTxtBox.Text = BLL.emailInfo.getSender();
+            subjectTxtBox.Text = BLL.emailInfo.getSubject();
+            bodyTxtBox.Text = BLL.emailInfo.getBody();
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            //if the form is minimized  
-            //hide it from the task bar  
-            //and show the system tray icon (represented by the NotifyIcon control)  
             if (this.WindowState == FormWindowState.Minimized)
             {
                 Hide();
@@ -43,22 +40,32 @@ namespace EmailNotifierUI
             this.WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = false;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            headerTxtBox.Text = BLL.emailInfo.getHeader();
-            bodyTxtBox.Text = BLL.emailInfo.getBody();
-        }
+        
 
         private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void logOutBtn_Click(object sender, EventArgs e)
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             new LoginForm().Show();
+        }
+
+        private void addLoginBtn_Click(object sender, EventArgs e)
+        {
+            new AddLoginForm().Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new RemoveLoginForm().Show();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
