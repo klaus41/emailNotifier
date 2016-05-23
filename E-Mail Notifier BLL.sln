@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Mail Notifier Logic Layer", "E-Mail Notifier Logic Layer\E-Mail Notifier Logic Layer.csproj", "{677060DF-769A-47EC-91EA-4660EA011B51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailNotifierUI", "emailNotifier\EmailNotifierUI\EmailNotifierUI.csproj", "{707B2F2D-81E5-46D4-A054-98B1E686C8A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailNotifierUI", "EmailNotifierUI\EmailNotifierUI.csproj", "{707B2F2D-81E5-46D4-A054-98B1E686C8A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

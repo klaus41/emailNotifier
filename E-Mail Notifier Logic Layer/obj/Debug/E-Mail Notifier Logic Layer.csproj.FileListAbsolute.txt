@@ -13,3 +13,18 @@ C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.W
 C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.csprojResolveAssemblyReference.cache
 C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.dll
 C:\wokr\E-Mail Notifier BLL\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\E-Mail Notifier Logic Layer.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\E-Mail Notifier Logic Layer.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Common.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Dns.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Groupware.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Mail.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Nntp.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.OpenPGP.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Pop3.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.Smtp.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\bin\Debug\ActiveUp.Net.WhoIs.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.csprojResolveAssemblyReference.cache
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\E-Mail Notifier Logic Layer\obj\Debug\E-Mail Notifier Logic Layer.pdb

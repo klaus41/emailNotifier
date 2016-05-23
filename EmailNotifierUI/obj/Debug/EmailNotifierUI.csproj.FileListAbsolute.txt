@@ -19,3 +19,27 @@ C:\wokr\E-Mail Notifier BLL\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifie
 C:\wokr\E-Mail Notifier BLL\EmailNotifierUI\bin\Debug\EmailNotifierUI.exe.config
 C:\wokr\E-Mail Notifier BLL\EmailNotifierUI\obj\Debug\EmailNotifierUI.exe
 C:\wokr\E-Mail Notifier BLL\EmailNotifierUI\obj\Debug\EmailNotifierUI.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\EmailNotifierUI.exe.config
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.csprojResolveAssemblyReference.cache
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.AddLoginForm.resources
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.LoginForm.resources
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.MainForm.resources
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.Properties.Resources.resources
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.RemoveLoginForm.resources
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.csproj.GenerateResource.Cache
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\EmailNotifierUI.exe
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\EmailNotifierUI.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\E-Mail Notifier Logic Layer.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Common.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Dns.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\E-Mail Notifier Logic Layer.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.exe
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Groupware.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Mail.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Nntp.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.OpenPGP.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Pop3.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.Smtp.dll
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\ActiveUp.Net.WhoIs.dll

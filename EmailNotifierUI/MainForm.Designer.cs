@@ -42,6 +42,7 @@
             this.senderTxtBox = new System.Windows.Forms.RichTextBox();
             this.addLoginBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkMailBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Email Notifier";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.notifyIcon1.Visible = true;
             // 
             // contextMenuStrip1
             // 
@@ -136,11 +138,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // checkMailBtn
+            // 
+            this.checkMailBtn.Location = new System.Drawing.Point(12, 376);
+            this.checkMailBtn.Name = "checkMailBtn";
+            this.checkMailBtn.Size = new System.Drawing.Size(496, 23);
+            this.checkMailBtn.TabIndex = 12;
+            this.checkMailBtn.Text = "Check Mail";
+            this.checkMailBtn.UseVisualStyleBackColor = true;
+            this.checkMailBtn.Click += new System.EventHandler(this.checkMailBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 469);
+            this.Controls.Add(this.checkMailBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addLoginBtn);
             this.Controls.Add(this.senderTxtBox);
@@ -170,6 +183,7 @@
         private System.Windows.Forms.RichTextBox senderTxtBox;
         private System.Windows.Forms.Button addLoginBtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button checkMailBtn;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Mail_Notifier_Logic_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+
 
 namespace EmailNotifierUI
 {
     public partial class LoginForm : Form
     {
-
-        string username;
-        string password;
+        ProxyConnector pc = ProxyConnector.GetInstance();
     
         public LoginForm()
         {
@@ -29,26 +28,17 @@ namespace EmailNotifierUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (loginCredentials.LoginCreds(usernameTxtBox.Text, passwordTxtBox.Text))
+            List<string> mailList = new List<string> { "inbox" };
+            try
             {
+                pc.AgentManager.AddAndStartSafeAgent(usernameTxtBox.Text, passwordTxtBox.Text, mailList);
                 new MainForm().Show();
                 this.Hide();
             }
-            else
+            catch(Exception x)
             {
-                MessageBox.Show("Error! Invalid username or password");
+                MessageBox.Show("Error! Invalid username or password" + x);
             }
-            /*username = "admin";
-            password = "password";
-            if(usernameTxtBox.Text == username && passwordTxtBox.Text == password)
-            {
-                new MainForm().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Error! Invalid username or password");
-            }*/
         }
 
     }
