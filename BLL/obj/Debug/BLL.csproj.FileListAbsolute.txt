@@ -1,0 +1,6 @@
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\bin\Debug\BLL.exe.config
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\bin\Debug\BLL.exe
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\bin\Debug\BLL.pdb
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\obj\Debug\BLL.exe
+C:\Users\Klaus\Documents\Visual Studio 2015\Projects\EmailNotifierUI\BLL\obj\Debug\BLL.pdb
