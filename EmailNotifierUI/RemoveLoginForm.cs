@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Mail_Notifier_Logic_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace EmailNotifierUI
 {
     public partial class RemoveLoginForm : Form
     {
+        ProxyConnector pc = ProxyConnector.GetInstance();
         public RemoveLoginForm()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace EmailNotifierUI
 
         private void removeLoginBtn_Click(object sender, EventArgs e)
         {
-            //send email to BLL....
+            pc.AgentManager.StopAndRemoveAgent(removeLoginUsernameTxtBox.Text);
             this.Dispose();
         }
     }

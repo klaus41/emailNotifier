@@ -16,7 +16,7 @@ namespace EmailNotifierUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(MainForm.GetInstance());
         }
     }
 }

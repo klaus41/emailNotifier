@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,15 +17,28 @@ namespace EmailNotifierUI
     {
         ProxyConnector pc = ProxyConnector.GetInstance();
         MessageCollection mc = new MessageCollection();
+        private bool done;
+        private Thread thread;
+        private bool threadRunning;
+        private static MainForm mf = null;
+        private List<string> users = new List<string>();
 
+        public List<string> UserList { get; set; }
 
-        public MainForm()
+        public static MainForm GetInstance()
+        {
+            if(mf == null)
+            {
+                mf = new MainForm();
+            }
+            return mf;
+        }
+
+        private MainForm()
         {            
             InitializeComponent();
             
         }
-
-        
 
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -39,7 +53,7 @@ namespace EmailNotifierUI
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-            notifyIcon1.Visible = false;
+            notifyIcon1.Visible = true;
         }
         
 
@@ -51,7 +65,7 @@ namespace EmailNotifierUI
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            new LoginForm().Show();
+            new AddLoginForm().Show();
         }
 
         private void addLoginBtn_Click(object sender, EventArgs e)
@@ -66,20 +80,55 @@ namespace EmailNotifierUI
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            try
+            {
+                foreach (string user in UserList)
+                {
+                    pc.AgentManager.StopAndRemoveAgent(user);
+                }
+            }
+            catch(Exception x)
+            {
+                Console.Write(x);
+            }
+            done = true;
+            thread.Interrupt();
             Application.Exit();
         }
-
-        private void checkMailBtn_Click(object sender, EventArgs e)
+        public void StartEmailChecker(string user)
         {
+            users.Add(user);
+            UserList = users;
+            if (!threadRunning)
+            {
+                done = false;
+                thread = new Thread(new ThreadStart(CheckForMail));
+                thread.Start();
+            }
+        }
 
+        private void CheckForMail()
+        {
+            threadRunning = true;
+            while (!done)
+            {
+                Console.WriteLine("IM IN LOOP");
                 mc = pc.AgentManager.GetAllFetchedEmails();
                 foreach (ActiveUp.Net.Mail.Message m in mc)
                 {
-                    notifyIcon1.ShowBalloonTip(3000, m.From.Name, m.BodyText.Text, ToolTipIcon.Info);
-                    bodyTxtBox.Text = m.BodyText.Text;
-                    subjectTxtBox.Text = m.Subject;
-                    senderTxtBox.Text = m.From.Name + ", <" + m.From.Email + ">";
+                    Console.WriteLine("FOREACH");
+                    try
+                    {
+                        notifyIcon1.ShowBalloonTip(3000, "From " + m.From.Name + " to " + m.To.ElementAt(0).Name, m.Subject, ToolTipIcon.Info);
+                        bodyTxtBox.Text = m.BodyText.Text;
+                        subjectTxtBox.Text = m.Subject;
+                        senderTxtBox.Text = m.From.Name + ", <" + m.From.Email + "> " + "To <" + m.To.ElementAt(0) + ">";
+                    }
+                    catch
+                    {
+                    }
                 }
+            }
         }
     }
 }

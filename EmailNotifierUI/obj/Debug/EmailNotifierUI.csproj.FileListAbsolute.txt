@@ -22,7 +22,6 @@ C:\wokr\E-Mail Notifier BLL\EmailNotifierUI\obj\Debug\EmailNotifierUI.pdb
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\bin\Debug\EmailNotifierUI.exe.config
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.csprojResolveAssemblyReference.cache
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.AddLoginForm.resources
-C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.LoginForm.resources
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.MainForm.resources
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.Properties.Resources.resources
 C:\Users\Klaus\Documents\Visual Studio 2015\Projects\emailNotifier\EmailNotifierUI\obj\Debug\EmailNotifierUI.RemoveLoginForm.resources

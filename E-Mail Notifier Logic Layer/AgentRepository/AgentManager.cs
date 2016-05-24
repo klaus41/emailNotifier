@@ -18,7 +18,7 @@ namespace E_Mail_Notifier_Logic_Layer.AgentRepository
             if (!collectionOfAgents.ContainsKey(userEmail))
             {
                 collectionOfAgents[userEmail] = new Agent(userEmail, userPassword, listOfMailboxes) { ServerAddress = serverAddress, PortNumber = portNumber, Ssl = ssl };
-                collectionOfAgents[userEmail].StartAgent();
+                collectionOfAgents[userEmail].StartManualAgent();
             }
         }
 
@@ -27,7 +27,7 @@ namespace E_Mail_Notifier_Logic_Layer.AgentRepository
             if (!collectionOfAgents.ContainsKey(userEmail))
             {
                 collectionOfAgents[userEmail] = new Agent(userEmail, userPassword, listOfMailboxes);
-                collectionOfAgents[userEmail].StartAgent();
+                collectionOfAgents[userEmail].StartSafeAgent();
             }
         }
 

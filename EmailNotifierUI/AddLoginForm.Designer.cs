@@ -110,7 +110,6 @@
             this.addressNewLoginTxtBox.Enabled = false;
             this.addressNewLoginTxtBox.Location = new System.Drawing.Point(12, 151);
             this.addressNewLoginTxtBox.Name = "addressNewLoginTxtBox";
-            this.addressNewLoginTxtBox.PasswordChar = '*';
             this.addressNewLoginTxtBox.Size = new System.Drawing.Size(280, 20);
             this.addressNewLoginTxtBox.TabIndex = 11;
             // 
@@ -119,7 +118,6 @@
             this.newLoginPortTxtBox.Enabled = false;
             this.newLoginPortTxtBox.Location = new System.Drawing.Point(298, 151);
             this.newLoginPortTxtBox.Name = "newLoginPortTxtBox";
-            this.newLoginPortTxtBox.PasswordChar = '*';
             this.newLoginPortTxtBox.Size = new System.Drawing.Size(74, 20);
             this.newLoginPortTxtBox.TabIndex = 13;
             // 
@@ -146,6 +144,7 @@
             // 
             // AddLoginForm
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 264);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Mail_Notifier_Logic_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace EmailNotifierUI
 {
     public partial class AddLoginForm : Form
     {
+        MainForm mf = MainForm.GetInstance();
+        ProxyConnector pc = ProxyConnector.GetInstance();
+        
         public AddLoginForm()
         {
             InitializeComponent();
@@ -39,8 +43,26 @@ namespace EmailNotifierUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //send down all info to BLL
-            this.Dispose();
-        }
+            List<string> mailList = new List<string> { "inbox" };
+            try
+            {
+                if(addManualConnectionCheckBox.Checked == false)
+                {
+                    pc.AgentManager.AddAndStartSafeAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList);
+                }
+                else
+                {
+                    int portNumber = int.Parse(newLoginPortTxtBox.Text);
+                    pc.AgentManager.AddAndStartManualAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList, addressNewLoginTxtBox.Text, portNumber, sslCheckBox.Checked);
+                }
+                
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error! Invalid username or password" + x);
+            }
+            mf.StartEmailChecker(usernameNewLoginTxtBox.Text);
+            this.Hide();
+        }        
     }
 }

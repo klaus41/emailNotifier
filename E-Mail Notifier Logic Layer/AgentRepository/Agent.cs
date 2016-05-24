@@ -42,22 +42,27 @@ namespace E_Mail_Notifier_Logic_Layer.AgentRepository
             return emails;
         }
 
-        public void StartAgent()
+        public void StartSafeAgent()
         {
             done = false;
 
-            if(ServerAddress != null && PortNumber > 0)
-            {
-                notifier.SetUpManualConnection(userEmail, userPassword, ServerAddress, PortNumber, Ssl);
-            }
-            else
-            {
-                notifier.SetUpSafeConnection(userEmail, userPassword);
-            }
+            notifier.SetUpSafeConnection(userEmail, userPassword);
 
             thread = new Thread(new ThreadStart(DoWork));
             thread.Start();
         }
+
+        public void StartManualAgent()
+        {
+            done = false;
+
+            notifier.SetUpManualConnection(userEmail, userPassword, ServerAddress, PortNumber, Ssl);
+
+            thread = new Thread(new ThreadStart(DoWork));
+            thread.Start();
+        }
+
+
 
         private void DoWork()
         {
