@@ -160,7 +160,7 @@
             this.Controls.Add(this.passwordNewLoginTxtBox);
             this.Controls.Add(this.usernameNewLoginTxtBox);
             this.Name = "AddLoginForm";
-            this.Text = "addLoginForm";
+            this.Text = "Add Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,7 +13,7 @@ namespace E_Mail_Notifier_Logic_Layer.AgentRepository
 
         private MessageCollection allEmails;
 
-        public void AddAndStartManualAgent(string userEmail, string userPassword, List<string> listOfMailboxes, string serverAddress, int portNumber, bool ssl)
+        public void AddAndStartAgent(string userEmail, string userPassword, List<string> listOfMailboxes, string serverAddress, int portNumber, bool ssl)
         {
             if (!collectionOfAgents.ContainsKey(userEmail))
             {
@@ -22,7 +22,7 @@ namespace E_Mail_Notifier_Logic_Layer.AgentRepository
             }
         }
 
-        public void AddAndStartSafeAgent(string userEmail, string userPassword, List<string> listOfMailboxes)
+        public void AddAndStartAgent(string userEmail, string userPassword, List<string> listOfMailboxes)
         {
             if (!collectionOfAgents.ContainsKey(userEmail))
             {

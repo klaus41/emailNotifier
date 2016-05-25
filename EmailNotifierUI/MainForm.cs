@@ -22,12 +22,13 @@ namespace EmailNotifierUI
         private bool threadRunning;
         private static MainForm mf = null;
         private List<string> users = new List<string>();
+        ActiveUp.Net.Mail.Message currentMessage;
 
         public List<string> UserList { get; set; }
 
         public static MainForm GetInstance()
         {
-            if(mf == null)
+            if (mf == null)
             {
                 mf = new MainForm();
             }
@@ -35,9 +36,9 @@ namespace EmailNotifierUI
         }
 
         private MainForm()
-        {            
+        {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -54,8 +55,10 @@ namespace EmailNotifierUI
             Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = true;
+            this.Focus();
+            this.BringToFront();
         }
-        
+
 
         private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -64,8 +67,13 @@ namespace EmailNotifierUI
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            new AddLoginForm().Show();
+            this.Show();
+            bodyTxtBox.Text = currentMessage.BodyText.Text;
+            subjectTxtBox.Text = currentMessage.Subject;
+            senderTxtBox.Text = currentMessage.From.Name + ", <" + currentMessage.From.Email + "> " + "To <" + currentMessage.To.ElementAt(0) + ">";
+            this.WindowState = FormWindowState.Normal;
+            this.Focus();
+            this.BringToFront();
         }
 
         private void addLoginBtn_Click(object sender, EventArgs e)
@@ -87,12 +95,15 @@ namespace EmailNotifierUI
                     pc.AgentManager.StopAndRemoveAgent(user);
                 }
             }
-            catch(Exception x)
+            catch (Exception x)
             {
                 Console.Write(x);
             }
             done = true;
-            thread.Interrupt();
+            if(thread != null)
+            {
+                thread.Interrupt();
+            }
             Application.Exit();
         }
         public void StartEmailChecker(string user)
@@ -112,17 +123,13 @@ namespace EmailNotifierUI
             threadRunning = true;
             while (!done)
             {
-                Console.WriteLine("IM IN LOOP");
                 mc = pc.AgentManager.GetAllFetchedEmails();
                 foreach (ActiveUp.Net.Mail.Message m in mc)
                 {
-                    Console.WriteLine("FOREACH");
                     try
                     {
                         notifyIcon1.ShowBalloonTip(3000, "From " + m.From.Name + " to " + m.To.ElementAt(0).Name, m.Subject, ToolTipIcon.Info);
-                        bodyTxtBox.Text = m.BodyText.Text;
-                        subjectTxtBox.Text = m.Subject;
-                        senderTxtBox.Text = m.From.Name + ", <" + m.From.Email + "> " + "To <" + m.To.ElementAt(0) + ">";
+                        currentMessage = m;
                     }
                     catch
                     {
@@ -130,5 +137,29 @@ namespace EmailNotifierUI
                 }
             }
         }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            this.Show();
+            bodyTxtBox.Text = currentMessage.BodyText.Text;
+            subjectTxtBox.Text = currentMessage.Subject;
+            senderTxtBox.Text = currentMessage.From.Name + ", <" + currentMessage.From.Email + "> " + "To <" + currentMessage.To.ElementAt(0) + ">";
+            this.WindowState = FormWindowState.Normal;
+            this.Focus();
+            this.BringToFront();
+        }
+
+        private void addNotifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AddLoginForm().Show();
+        }
+
+        private void removeNotifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RemoveLoginForm().Show();
+        }
     }
 }
+
+
+

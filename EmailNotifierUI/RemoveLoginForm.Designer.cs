@@ -61,6 +61,7 @@
             // 
             // RemoveLoginForm
             // 
+            this.AcceptButton = this.removeLoginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 131);
@@ -68,7 +69,7 @@
             this.Controls.Add(this.removeLoginUsernameTxtBox);
             this.Controls.Add(this.removeLoginBtn);
             this.Name = "RemoveLoginForm";
-            this.Text = "RemoveLoginForm";
+            this.Text = "Remove Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

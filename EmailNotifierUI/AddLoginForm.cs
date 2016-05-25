@@ -48,21 +48,21 @@ namespace EmailNotifierUI
             {
                 if(addManualConnectionCheckBox.Checked == false)
                 {
-                    pc.AgentManager.AddAndStartSafeAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList);
+                    pc.AgentManager.AddAndStartAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList);
                 }
                 else
                 {
                     int portNumber = int.Parse(newLoginPortTxtBox.Text);
-                    pc.AgentManager.AddAndStartManualAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList, addressNewLoginTxtBox.Text, portNumber, sslCheckBox.Checked);
+                    pc.AgentManager.AddAndStartAgent(usernameNewLoginTxtBox.Text, passwordNewLoginTxtBox.Text, mailList, addressNewLoginTxtBox.Text, portNumber, sslCheckBox.Checked);
                 }
-                
+                mf.StartEmailChecker(usernameNewLoginTxtBox.Text);
+                this.Hide();
+                mf.WindowState = FormWindowState.Minimized;
             }
             catch (Exception x)
             {
-                MessageBox.Show("Error! Invalid username or password" + x);
+                MessageBox.Show("Error! Invalid username or password");
             }
-            mf.StartEmailChecker(usernameNewLoginTxtBox.Text);
-            this.Hide();
         }        
     }
 }

@@ -42,6 +42,9 @@
             this.senderTxtBox = new System.Windows.Forms.RichTextBox();
             this.addLoginBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +58,7 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Email Notifier";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // contextMenuStrip1
@@ -65,37 +69,39 @@
             this.removeNotifierToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 92);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
             // addNotifierToolStripMenuItem
             // 
             this.addNotifierToolStripMenuItem.Name = "addNotifierToolStripMenuItem";
-            this.addNotifierToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.addNotifierToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.addNotifierToolStripMenuItem.Text = "Add Notifier";
+            this.addNotifierToolStripMenuItem.Click += new System.EventHandler(this.addNotifierToolStripMenuItem_Click);
             // 
             // removeNotifierToolStripMenuItem
             // 
             this.removeNotifierToolStripMenuItem.Name = "removeNotifierToolStripMenuItem";
-            this.removeNotifierToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.removeNotifierToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.removeNotifierToolStripMenuItem.Text = "Remove Notifier";
+            this.removeNotifierToolStripMenuItem.Click += new System.EventHandler(this.removeNotifierToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.logOutToolStripMenuItem.Text = "Show Latest Recieved E-Mail";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // subjectTxtBox
             // 
-            this.subjectTxtBox.Location = new System.Drawing.Point(12, 42);
+            this.subjectTxtBox.Location = new System.Drawing.Point(12, 65);
             this.subjectTxtBox.Name = "subjectTxtBox";
             this.subjectTxtBox.Size = new System.Drawing.Size(496, 21);
             this.subjectTxtBox.TabIndex = 6;
@@ -103,15 +109,15 @@
             // 
             // bodyTxtBox
             // 
-            this.bodyTxtBox.Location = new System.Drawing.Point(12, 69);
+            this.bodyTxtBox.Location = new System.Drawing.Point(12, 105);
             this.bodyTxtBox.Name = "bodyTxtBox";
-            this.bodyTxtBox.Size = new System.Drawing.Size(496, 230);
+            this.bodyTxtBox.Size = new System.Drawing.Size(496, 294);
             this.bodyTxtBox.TabIndex = 7;
             this.bodyTxtBox.Text = "";
             // 
             // senderTxtBox
             // 
-            this.senderTxtBox.Location = new System.Drawing.Point(12, 15);
+            this.senderTxtBox.Location = new System.Drawing.Point(12, 25);
             this.senderTxtBox.Name = "senderTxtBox";
             this.senderTxtBox.Size = new System.Drawing.Size(496, 21);
             this.senderTxtBox.TabIndex = 9;
@@ -137,11 +143,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "From <Sender> To <Recipient>:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Subject:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Message Body:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 469);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addLoginBtn);
             this.Controls.Add(this.senderTxtBox);
@@ -156,6 +192,7 @@
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -171,6 +208,9 @@
         private System.Windows.Forms.RichTextBox senderTxtBox;
         private System.Windows.Forms.Button addLoginBtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
